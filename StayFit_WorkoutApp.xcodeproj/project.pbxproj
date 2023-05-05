@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936C2A059E3100DFD63B /* AppDelegate.swift */; };
+		46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936E2A059E3100DFD63B /* SceneDelegate.swift */; };
+		46E593712A059E3100DFD63B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593702A059E3100DFD63B /* ViewController.swift */; };
+		46E593742A059E3100DFD63B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E593722A059E3100DFD63B /* Main.storyboard */; };
+		46E593762A059E4100DFD63B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E593752A059E4100DFD63B /* Assets.xcassets */; };
+		46E593792A059E4100DFD63B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E593772A059E4100DFD63B /* LaunchScreen.storyboard */; };
+		46E593842A059E4400DFD63B /* StayFit_WorkoutAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593832A059E4400DFD63B /* StayFit_WorkoutAppTests.swift */; };
+		46E5938E2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5938D2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift */; };
+		46E593902A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5938F2A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46E593802A059E4400DFD63B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46E593612A059E3100DFD63B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46E593682A059E3100DFD63B;
+			remoteInfo = StayFit_WorkoutApp;
+		};
+		46E5938A2A059E4500DFD63B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46E593612A059E3100DFD63B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46E593682A059E3100DFD63B;
+			remoteInfo = StayFit_WorkoutApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayFit_WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E5936C2A059E3100DFD63B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46E5936E2A059E3100DFD63B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		46E593702A059E3100DFD63B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46E593732A059E3100DFD63B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46E593752A059E4100DFD63B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46E593782A059E4100DFD63B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46E5937A2A059E4100DFD63B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E5937F2A059E4400DFD63B /* StayFit_WorkoutAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayFit_WorkoutAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E593832A059E4400DFD63B /* StayFit_WorkoutAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayFit_WorkoutAppTests.swift; sourceTree = "<group>"; };
+		46E593892A059E4500DFD63B /* StayFit_WorkoutAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayFit_WorkoutAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E5938D2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayFit_WorkoutAppUITests.swift; sourceTree = "<group>"; };
+		46E5938F2A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayFit_WorkoutAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46E593662A059E3100DFD63B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E5937C2A059E4400DFD63B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E593862A059E4500DFD63B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46E593602A059E3100DFD63B = {
+			isa = PBXGroup;
+			children = (
+				46E5936B2A059E3100DFD63B /* StayFit_WorkoutApp */,
+				46E593822A059E4400DFD63B /* StayFit_WorkoutAppTests */,
+				46E5938C2A059E4500DFD63B /* StayFit_WorkoutAppUITests */,
+				46E5936A2A059E3100DFD63B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46E5936A2A059E3100DFD63B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */,
+				46E5937F2A059E4400DFD63B /* StayFit_WorkoutAppTests.xctest */,
+				46E593892A059E4500DFD63B /* StayFit_WorkoutAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46E5936B2A059E3100DFD63B /* StayFit_WorkoutApp */ = {
+			isa = PBXGroup;
+			children = (
+				46E5936C2A059E3100DFD63B /* AppDelegate.swift */,
+				46E5936E2A059E3100DFD63B /* SceneDelegate.swift */,
+				46E593702A059E3100DFD63B /* ViewController.swift */,
+				46E593722A059E3100DFD63B /* Main.storyboard */,
+				46E593752A059E4100DFD63B /* Assets.xcassets */,
+				46E593772A059E4100DFD63B /* LaunchScreen.storyboard */,
+				46E5937A2A059E4100DFD63B /* Info.plist */,
+			);
+			path = StayFit_WorkoutApp;
+			sourceTree = "<group>";
+		};
+		46E593822A059E4400DFD63B /* StayFit_WorkoutAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				46E593832A059E4400DFD63B /* StayFit_WorkoutAppTests.swift */,
+			);
+			path = StayFit_WorkoutAppTests;
+			sourceTree = "<group>";
+		};
+		46E5938C2A059E4500DFD63B /* StayFit_WorkoutAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				46E5938D2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift */,
+				46E5938F2A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift */,
+			);
+			path = StayFit_WorkoutAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46E593682A059E3100DFD63B /* StayFit_WorkoutApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46E593932A059E4500DFD63B /* Build configuration list for PBXNativeTarget "StayFit_WorkoutApp" */;
+			buildPhases = (
+				46E593652A059E3100DFD63B /* Sources */,
+				46E593662A059E3100DFD63B /* Frameworks */,
+				46E593672A059E3100DFD63B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StayFit_WorkoutApp;
+			productName = StayFit_WorkoutApp;
+			productReference = 46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46E5937E2A059E4400DFD63B /* StayFit_WorkoutAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46E593962A059E4500DFD63B /* Build configuration list for PBXNativeTarget "StayFit_WorkoutAppTests" */;
+			buildPhases = (
+				46E5937B2A059E4400DFD63B /* Sources */,
+				46E5937C2A059E4400DFD63B /* Frameworks */,
+				46E5937D2A059E4400DFD63B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46E593812A059E4400DFD63B /* PBXTargetDependency */,
+			);
+			name = StayFit_WorkoutAppTests;
+			productName = StayFit_WorkoutAppTests;
+			productReference = 46E5937F2A059E4400DFD63B /* StayFit_WorkoutAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		46E593882A059E4500DFD63B /* StayFit_WorkoutAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46E593992A059E4500DFD63B /* Build configuration list for PBXNativeTarget "StayFit_WorkoutAppUITests" */;
+			buildPhases = (
+				46E593852A059E4500DFD63B /* Sources */,
+				46E593862A059E4500DFD63B /* Frameworks */,
+				46E593872A059E4500DFD63B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46E5938B2A059E4500DFD63B /* PBXTargetDependency */,
+			);
+			name = StayFit_WorkoutAppUITests;
+			productName = StayFit_WorkoutAppUITests;
+			productReference = 46E593892A059E4500DFD63B /* StayFit_WorkoutAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46E593612A059E3100DFD63B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					46E593682A059E3100DFD63B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					46E5937E2A059E4400DFD63B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 46E593682A059E3100DFD63B;
+					};
+					46E593882A059E4500DFD63B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 46E593682A059E3100DFD63B;
+					};
+				};
+			};
+			buildConfigurationList = 46E593642A059E3100DFD63B /* Build configuration list for PBXProject "StayFit_WorkoutApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46E593602A059E3100DFD63B;
+			productRefGroup = 46E5936A2A059E3100DFD63B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46E593682A059E3100DFD63B /* StayFit_WorkoutApp */,
+				46E5937E2A059E4400DFD63B /* StayFit_WorkoutAppTests */,
+				46E593882A059E4500DFD63B /* StayFit_WorkoutAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46E593672A059E3100DFD63B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E593792A059E4100DFD63B /* LaunchScreen.storyboard in Resources */,
+				46E593762A059E4100DFD63B /* Assets.xcassets in Resources */,
+				46E593742A059E3100DFD63B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E5937D2A059E4400DFD63B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E593872A059E4500DFD63B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46E593652A059E3100DFD63B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E593712A059E3100DFD63B /* ViewController.swift in Sources */,
+				46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */,
+				46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E5937B2A059E4400DFD63B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E593842A059E4400DFD63B /* StayFit_WorkoutAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46E593852A059E4500DFD63B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E5938E2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift in Sources */,
+				46E593902A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46E593812A059E4400DFD63B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46E593682A059E3100DFD63B /* StayFit_WorkoutApp */;
+			targetProxy = 46E593802A059E4400DFD63B /* PBXContainerItemProxy */;
+		};
+		46E5938B2A059E4500DFD63B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46E593682A059E3100DFD63B /* StayFit_WorkoutApp */;
+			targetProxy = 46E5938A2A059E4500DFD63B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46E593722A059E3100DFD63B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46E593732A059E3100DFD63B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46E593772A059E4100DFD63B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46E593782A059E4100DFD63B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46E593912A059E4500DFD63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46E593922A059E4500DFD63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46E593942A059E4500DFD63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D58ASQ9KUC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StayFit_WorkoutApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "StayFit.StayFit-WorkoutApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46E593952A059E4500DFD63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D58ASQ9KUC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StayFit_WorkoutApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "StayFit.StayFit-WorkoutApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		46E593972A059E4500DFD63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D58ASQ9KUC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "StayFit.StayFit-WorkoutAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StayFit_WorkoutApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StayFit_WorkoutApp";
+			};
+			name = Debug;
+		};
+		46E593982A059E4500DFD63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D58ASQ9KUC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "StayFit.StayFit-WorkoutAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StayFit_WorkoutApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StayFit_WorkoutApp";
+			};
+			name = Release;
+		};
+		46E5939A2A059E4500DFD63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D58ASQ9KUC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "StayFit.StayFit-WorkoutAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StayFit_WorkoutApp;
+			};
+			name = Debug;
+		};
+		46E5939B2A059E4500DFD63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D58ASQ9KUC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "StayFit.StayFit-WorkoutAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StayFit_WorkoutApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46E593642A059E3100DFD63B /* Build configuration list for PBXProject "StayFit_WorkoutApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46E593912A059E4500DFD63B /* Debug */,
+				46E593922A059E4500DFD63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46E593932A059E4500DFD63B /* Build configuration list for PBXNativeTarget "StayFit_WorkoutApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46E593942A059E4500DFD63B /* Debug */,
+				46E593952A059E4500DFD63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46E593962A059E4500DFD63B /* Build configuration list for PBXNativeTarget "StayFit_WorkoutAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46E593972A059E4500DFD63B /* Debug */,
+				46E593982A059E4500DFD63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46E593992A059E4500DFD63B /* Build configuration list for PBXNativeTarget "StayFit_WorkoutAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46E5939A2A059E4500DFD63B /* Debug */,
+				46E5939B2A059E4500DFD63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46E593612A059E3100DFD63B /* Project object */;
+}
