@@ -10,12 +10,13 @@
 		46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936C2A059E3100DFD63B /* AppDelegate.swift */; };
 		46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936E2A059E3100DFD63B /* SceneDelegate.swift */; };
 		46E593712A059E3100DFD63B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593702A059E3100DFD63B /* ViewController.swift */; };
-		46E593742A059E3100DFD63B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E593722A059E3100DFD63B /* Main.storyboard */; };
 		46E593762A059E4100DFD63B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E593752A059E4100DFD63B /* Assets.xcassets */; };
 		46E593792A059E4100DFD63B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E593772A059E4100DFD63B /* LaunchScreen.storyboard */; };
 		46E593842A059E4400DFD63B /* StayFit_WorkoutAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593832A059E4400DFD63B /* StayFit_WorkoutAppTests.swift */; };
 		46E5938E2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5938D2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift */; };
 		46E593902A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5938F2A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift */; };
+		46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5939C2A05A03300DFD63B /* FirstScreen.swift */; };
+		46E593A12A05A27200DFD63B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593A02A05A27200DFD63B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		46E5936C2A059E3100DFD63B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E5936E2A059E3100DFD63B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		46E593702A059E3100DFD63B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		46E593732A059E3100DFD63B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46E593752A059E4100DFD63B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E593782A059E4100DFD63B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E5937A2A059E4100DFD63B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		46E593892A059E4500DFD63B /* StayFit_WorkoutAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayFit_WorkoutAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5938D2A059E4500DFD63B /* StayFit_WorkoutAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayFit_WorkoutAppUITests.swift; sourceTree = "<group>"; };
 		46E5938F2A059E4500DFD63B /* StayFit_WorkoutAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayFit_WorkoutAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		46E5939C2A05A03300DFD63B /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
+		46E593A02A05A27200DFD63B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +104,11 @@
 				46E5936C2A059E3100DFD63B /* AppDelegate.swift */,
 				46E5936E2A059E3100DFD63B /* SceneDelegate.swift */,
 				46E593702A059E3100DFD63B /* ViewController.swift */,
-				46E593722A059E3100DFD63B /* Main.storyboard */,
 				46E593752A059E4100DFD63B /* Assets.xcassets */,
 				46E593772A059E4100DFD63B /* LaunchScreen.storyboard */,
 				46E5937A2A059E4100DFD63B /* Info.plist */,
+				46E5939C2A05A03300DFD63B /* FirstScreen.swift */,
+				46E593A02A05A27200DFD63B /* Extensions.swift */,
 			);
 			path = StayFit_WorkoutApp;
 			sourceTree = "<group>";
@@ -233,7 +236,6 @@
 			files = (
 				46E593792A059E4100DFD63B /* LaunchScreen.storyboard in Resources */,
 				46E593762A059E4100DFD63B /* Assets.xcassets in Resources */,
-				46E593742A059E3100DFD63B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E593A12A05A27200DFD63B /* Extensions.swift in Sources */,
+				46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */,
 				46E593712A059E3100DFD63B /* ViewController.swift in Sources */,
 				46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */,
 				46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */,
@@ -297,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		46E593722A059E3100DFD63B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46E593732A059E3100DFD63B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		46E593772A059E4100DFD63B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
