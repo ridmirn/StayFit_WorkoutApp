@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		469A35F42A06C8CE00DED7F5 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */; };
 		46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936C2A059E3100DFD63B /* AppDelegate.swift */; };
 		46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936E2A059E3100DFD63B /* SceneDelegate.swift */; };
 		46E593712A059E3100DFD63B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593702A059E3100DFD63B /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayFit_WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5936C2A059E3100DFD63B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E5936E2A059E3100DFD63B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		469A35EF2A06C81400DED7F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		469A35F02A06C82700DED7F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46E593A02A05A27200DFD63B /* Extensions.swift */,
+				46E5939C2A05A03300DFD63B /* FirstScreen.swift */,
+				469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		469A35F12A06C83600DED7F5 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		46E593602A059E3100DFD63B = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +127,15 @@
 		46E5936B2A059E3100DFD63B /* StayFit_WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				469A35F12A06C83600DED7F5 /* View Model */,
+				469A35F02A06C82700DED7F5 /* View */,
+				469A35EF2A06C81400DED7F5 /* Model */,
 				46E5936C2A059E3100DFD63B /* AppDelegate.swift */,
 				46E5936E2A059E3100DFD63B /* SceneDelegate.swift */,
 				46E593702A059E3100DFD63B /* ViewController.swift */,
 				46E593752A059E4100DFD63B /* Assets.xcassets */,
 				46E593772A059E4100DFD63B /* LaunchScreen.storyboard */,
 				46E5937A2A059E4100DFD63B /* Info.plist */,
-				46E5939C2A05A03300DFD63B /* FirstScreen.swift */,
-				46E593A02A05A27200DFD63B /* Extensions.swift */,
 			);
 			path = StayFit_WorkoutApp;
 			sourceTree = "<group>";
@@ -265,6 +292,7 @@
 				46E593712A059E3100DFD63B /* ViewController.swift in Sources */,
 				46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */,
 				46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */,
+				469A35F42A06C8CE00DED7F5 /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +466,7 @@
 				INFOPLIST_FILE = StayFit_WorkoutApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,7 +494,7 @@
 				INFOPLIST_FILE = StayFit_WorkoutApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

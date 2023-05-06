@@ -42,7 +42,7 @@ class FirstScreen: UIViewController {
         self.StartButton.configuration?.baseBackgroundColor = UIColor.AppColor
       
         StartButton.setAttributedTitle(customButton, for: .normal)
-       // StartButton.addTarget(self, action: //#selector(goToLoginScreen), for: .touchUpInside)
+       StartButton.addTarget(self, action:#selector(goToLoginScreen), for: .touchUpInside)
     
         StartButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -63,10 +63,10 @@ class FirstScreen: UIViewController {
     
     
     
-   // @objc func goToLoginScreen (){
-     //   let loginScreen = LoginScreen()
-       // navigationController?.pushViewController(loginScreen, animated:true)
-   // }
+   @objc func goToLoginScreen (){
+    let loginScreen = LoginScreen()
+       navigationController?.pushViewController(loginScreen, animated:true)
+    }
 
 
 }
