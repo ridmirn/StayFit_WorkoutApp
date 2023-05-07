@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465319162A0824EE00332BA8 /* WorkoutGoalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */; };
+		465319182A08278A00332BA8 /* NewAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465319172A08278A00332BA8 /* NewAccountScreen.swift */; };
 		469A35F42A06C8CE00DED7F5 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */; };
 		469A35F62A06CFA400DED7F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 469A35F52A06CFA400DED7F5 /* GoogleService-Info.plist */; };
 		469A35F92A06D9A400DED7F5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 469A35F82A06D9A400DED7F5 /* FirebaseAnalytics */; };
 		469A35FB2A06D9A400DED7F5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 469A35FA2A06D9A400DED7F5 /* FirebaseFirestore */; };
+		46BE55C22A07AA2A003F93E6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BE55C12A07AA2A003F93E6 /* LoginViewModel.swift */; };
+		46BE55C62A07AC4D003F93E6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BE55C52A07AC4D003F93E6 /* LoginModel.swift */; };
+		46BE55C92A0808BE003F93E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 46BE55C82A0808BE003F93E6 /* FirebaseAuth */; };
 		46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936C2A059E3100DFD63B /* AppDelegate.swift */; };
 		46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936E2A059E3100DFD63B /* SceneDelegate.swift */; };
 		46E593712A059E3100DFD63B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593702A059E3100DFD63B /* ViewController.swift */; };
@@ -41,8 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutGoalScreen.swift; sourceTree = "<group>"; };
+		465319172A08278A00332BA8 /* NewAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountScreen.swift; sourceTree = "<group>"; };
 		469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		469A35F52A06CFA400DED7F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		46BE55C12A07AA2A003F93E6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		46BE55C52A07AC4D003F93E6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayFit_WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5936C2A059E3100DFD63B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E5936E2A059E3100DFD63B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				469A35F92A06D9A400DED7F5 /* FirebaseAnalytics in Frameworks */,
+				46BE55C92A0808BE003F93E6 /* FirebaseAuth in Frameworks */,
 				469A35FB2A06D9A400DED7F5 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +99,7 @@
 		469A35EF2A06C81400DED7F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46BE55C52A07AC4D003F93E6 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +110,8 @@
 				46E593A02A05A27200DFD63B /* Extensions.swift */,
 				46E5939C2A05A03300DFD63B /* FirstScreen.swift */,
 				469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */,
+				465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */,
+				465319172A08278A00332BA8 /* NewAccountScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,8 +119,16 @@
 		469A35F12A06C83600DED7F5 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				46BE55C12A07AA2A003F93E6 /* LoginViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		46BE55C72A0808BE003F93E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		46E593602A059E3100DFD63B = {
@@ -117,6 +138,7 @@
 				46E593822A059E4400DFD63B /* StayFit_WorkoutAppTests */,
 				46E5938C2A059E4500DFD63B /* StayFit_WorkoutAppUITests */,
 				46E5936A2A059E3100DFD63B /* Products */,
+				46BE55C72A0808BE003F93E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +205,7 @@
 			packageProductDependencies = (
 				469A35F82A06D9A400DED7F5 /* FirebaseAnalytics */,
 				469A35FA2A06D9A400DED7F5 /* FirebaseFirestore */,
+				46BE55C82A0808BE003F93E6 /* FirebaseAuth */,
 			);
 			productName = StayFit_WorkoutApp;
 			productReference = 46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */;
@@ -305,9 +328,13 @@
 				46E593A12A05A27200DFD63B /* Extensions.swift in Sources */,
 				46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */,
 				46E593712A059E3100DFD63B /* ViewController.swift in Sources */,
+				465319162A0824EE00332BA8 /* WorkoutGoalScreen.swift in Sources */,
 				46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */,
 				46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */,
+				46BE55C62A07AC4D003F93E6 /* LoginModel.swift in Sources */,
 				469A35F42A06C8CE00DED7F5 /* LoginScreen.swift in Sources */,
+				465319182A08278A00332BA8 /* NewAccountScreen.swift in Sources */,
+				46BE55C22A07AA2A003F93E6 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +690,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 469A35F72A06D9A400DED7F5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		46BE55C82A0808BE003F93E6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 469A35F72A06D9A400DED7F5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

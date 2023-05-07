@@ -50,6 +50,15 @@ class LoginScreen: UIViewController {
         button.layer.masksToBounds = true
         return button
     }()
+    
+    
+    let NewAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 8
+        button.layer.masksToBounds = true
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +67,7 @@ class LoginScreen: UIViewController {
         setappleID()
         setPassword()
         setLoginButton()
+        setNewAccountButton()
         setLabel()
     }
     
@@ -95,28 +105,53 @@ class LoginScreen: UIViewController {
     
     }
     
-    func setLoginButton(){
+func setLoginButton(){
         view.addSubview(loginButton)
        loginButton.backgroundColor = UIColor.AppColor
-        loginButton.setAttributedTitle(customButton, for: .normal)
-        //loginButton.addTarget(self, action: #selector(goToGainLossScreen), for: .touchUpInside)
+        loginButton.setAttributedTitle(customLoginButton, for: .normal)
+    loginButton.addTarget(self, action:#selector(goGainLossScreen), for: .touchUpInside)
   
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  30).isActive = true
         loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -30).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        loginButton.topAnchor.constraint(equalTo: password.bottomAnchor, constant: 80).isActive = true
+        loginButton.topAnchor.constraint(equalTo: password.bottomAnchor, constant: 40).isActive = true
     }
     
-    let customButton = NSMutableAttributedString(string: "Login", attributes: [
+func setNewAccountButton(){
+        view.addSubview(NewAccountButton)
+       NewAccountButton.backgroundColor = UIColor.AppColor
+        NewAccountButton.setAttributedTitle(customNewAccountButton, for: .normal)
+
+   NewAccountButton.addTarget(self, action:#selector(gotoNewAcoountScreen), for: .touchUpInside)
+  
+        NewAccountButton.translatesAutoresizingMaskIntoConstraints = false
+        NewAccountButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  30).isActive = true
+        NewAccountButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -30).isActive = true
+        NewAccountButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        NewAccountButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20).isActive = true
+    }
+    
+    let customLoginButton = NSMutableAttributedString(string: "Login", attributes: [
+        NSAttributedString.Key.foregroundColor : UIColor.black,
+        NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)
+        
+    ])
+    let customNewAccountButton = NSMutableAttributedString(string: "Create Account", attributes: [
         NSAttributedString.Key.foregroundColor : UIColor.black,
         NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)
         
     ])
     
-   // @objc func goToGainLossScreen (){
-     //   let gainloss = GainOrLoss()
-       // navigationController?.pushViewController(gainloss, animated:true)
-   // }
+   @objc func gotoNewAcoountScreen (){
+       let newaccount = NewAccountScreen()
+        navigationController?.pushViewController(newaccount, animated:true)
+    }
+    
+    @objc func goGainLossScreen (){
+        let gainloss = WorkoutGoalScreen()
+         navigationController?.pushViewController(gainloss, animated:true)
+     }
+
 
 }
