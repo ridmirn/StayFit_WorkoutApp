@@ -7,6 +7,8 @@
 
 import UIKit
 
+import FirebaseAuth
+
 class LoginScreen: UIViewController {
 
     
@@ -75,7 +77,7 @@ class LoginScreen: UIViewController {
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         
     }
     
@@ -88,7 +90,7 @@ class LoginScreen: UIViewController {
         appleid.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  30).isActive = true
         appleid.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -30).isActive = true
         appleid.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        appleid.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 80).isActive = true
+        appleid.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 30).isActive = true
     
     }
     
@@ -109,7 +111,7 @@ func setLoginButton(){
         view.addSubview(loginButton)
        loginButton.backgroundColor = UIColor.AppColor
         loginButton.setAttributedTitle(customLoginButton, for: .normal)
-    loginButton.addTarget(self, action:#selector(goGainLossScreen), for: .touchUpInside)
+    loginButton.addTarget(self, action:#selector(loginTapped), for: .touchUpInside)
   
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  30).isActive = true
@@ -152,6 +154,32 @@ func setNewAccountButton(){
         let gainloss = WorkoutGoalScreen()
          navigationController?.pushViewController(gainloss, animated:true)
      }
+    
+    @objc func loginTapped(){
+        let email = appleid.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().signIn(withEmail: email, password: password){
+            (result, error) in
+            if error != nil{
+                self.showError("Invalid creditonals")
+            }
+            else{
+                self.goGainLossScreen()
+            }
+            
+            
+        }
+    }
+    
+    func showError(_ message: String){
+        DispatchQueue.main.async{
+            let alterController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alterController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present (alterController, animated: true, completion: nil)
+            
+        }
+    }
 
 
 }

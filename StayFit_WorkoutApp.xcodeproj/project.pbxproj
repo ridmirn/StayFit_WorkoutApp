@@ -96,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4653191A2A0838CB00332BA8 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		469A35EF2A06C81400DED7F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +162,7 @@
 		46E5936B2A059E3100DFD63B /* StayFit_WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				4653191A2A0838CB00332BA8 /* Firebase */,
 				469A35F52A06CFA400DED7F5 /* GoogleService-Info.plist */,
 				469A35F12A06C83600DED7F5 /* View Model */,
 				469A35F02A06C82700DED7F5 /* View */,
