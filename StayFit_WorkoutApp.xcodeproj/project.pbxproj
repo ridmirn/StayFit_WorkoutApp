@@ -13,12 +13,12 @@
 		469A35F62A06CFA400DED7F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 469A35F52A06CFA400DED7F5 /* GoogleService-Info.plist */; };
 		469A35F92A06D9A400DED7F5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 469A35F82A06D9A400DED7F5 /* FirebaseAnalytics */; };
 		469A35FB2A06D9A400DED7F5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 469A35FA2A06D9A400DED7F5 /* FirebaseFirestore */; };
+		469E088C2A0AD537002D43AD /* UserProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E088B2A0AD537002D43AD /* UserProfileScreen.swift */; };
 		46BE55C22A07AA2A003F93E6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BE55C12A07AA2A003F93E6 /* LoginViewModel.swift */; };
 		46BE55C62A07AC4D003F93E6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BE55C52A07AC4D003F93E6 /* LoginModel.swift */; };
 		46BE55C92A0808BE003F93E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 46BE55C82A0808BE003F93E6 /* FirebaseAuth */; };
 		46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936C2A059E3100DFD63B /* AppDelegate.swift */; };
 		46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5936E2A059E3100DFD63B /* SceneDelegate.swift */; };
-		46E593712A059E3100DFD63B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593702A059E3100DFD63B /* ViewController.swift */; };
 		46E593762A059E4100DFD63B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E593752A059E4100DFD63B /* Assets.xcassets */; };
 		46E593792A059E4100DFD63B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E593772A059E4100DFD63B /* LaunchScreen.storyboard */; };
 		46E593842A059E4400DFD63B /* StayFit_WorkoutAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593832A059E4400DFD63B /* StayFit_WorkoutAppTests.swift */; };
@@ -50,12 +50,12 @@
 		465319172A08278A00332BA8 /* NewAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountScreen.swift; sourceTree = "<group>"; };
 		469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		469A35F52A06CFA400DED7F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		469E088B2A0AD537002D43AD /* UserProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileScreen.swift; sourceTree = "<group>"; };
 		46BE55C12A07AA2A003F93E6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		46BE55C52A07AC4D003F93E6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayFit_WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E5936C2A059E3100DFD63B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E5936E2A059E3100DFD63B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		46E593702A059E3100DFD63B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46E593752A059E4100DFD63B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E593782A059E4100DFD63B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E5937A2A059E4100DFD63B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +119,7 @@
 				469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */,
 				465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */,
 				465319172A08278A00332BA8 /* NewAccountScreen.swift */,
+				469E088B2A0AD537002D43AD /* UserProfileScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +170,6 @@
 				469A35EF2A06C81400DED7F5 /* Model */,
 				46E5936C2A059E3100DFD63B /* AppDelegate.swift */,
 				46E5936E2A059E3100DFD63B /* SceneDelegate.swift */,
-				46E593702A059E3100DFD63B /* ViewController.swift */,
 				46E593752A059E4100DFD63B /* Assets.xcassets */,
 				46E593772A059E4100DFD63B /* LaunchScreen.storyboard */,
 				46E5937A2A059E4100DFD63B /* Info.plist */,
@@ -333,9 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469E088C2A0AD537002D43AD /* UserProfileScreen.swift in Sources */,
 				46E593A12A05A27200DFD63B /* Extensions.swift in Sources */,
 				46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */,
-				46E593712A059E3100DFD63B /* ViewController.swift in Sources */,
 				465319162A0824EE00332BA8 /* WorkoutGoalScreen.swift in Sources */,
 				46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */,
 				46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */,
