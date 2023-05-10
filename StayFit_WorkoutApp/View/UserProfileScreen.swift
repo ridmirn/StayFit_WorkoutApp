@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class UserProfileScreen: UIViewController {
+    
+    var viewModel = UserProfileViewModel()
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "PROFILE"
@@ -37,14 +41,12 @@ class UserProfileScreen: UIViewController {
         textfield.textAlignment = .center
         return textfield
     }()
-    
     let Height: UITextField = {
         let textfield = UITextField()
         textfield.keyboardType = .emailAddress
         textfield.layer.cornerRadius = 8
         textfield.layer.masksToBounds = true
         textfield.layer.borderWidth = 1.0
-        textfield.isSecureTextEntry = true
         textfield.textAlignment = .center
         return textfield
     }()
@@ -66,6 +68,9 @@ class UserProfileScreen: UIViewController {
         setHeight()
         setUserProfileButton()
         setLabel()
+        Age.text = viewModel.user.age
+        Weight.text = viewModel.user.weight
+        Height.text = viewModel.user.height
     }
     
     func setLabel(){
@@ -124,8 +129,8 @@ class UserProfileScreen: UIViewController {
         self.view.addSubview(CreateProfile)
         self.CreateProfile.backgroundColor = UIColor.AppColor
         self.CreateProfile.setAttributedTitle(customProfileButton, for: .normal)
-        //self.CreateProfile.addTarget(self, action:#selector(creactAccountTapped), for: .touchUpInside)
-      
+        //self.CreateProfile.addTarget(self, action:#selector(nextButtonTapped), for: .touchUpInside)
+        self.CreateProfile.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         self.CreateProfile.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.CreateProfile.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant:  30),
@@ -140,5 +145,9 @@ class UserProfileScreen: UIViewController {
         NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)
         
     ])
+    
+    @objc func nextButtonTapped(){
+        viewModel.save()
+    }
 
 }
