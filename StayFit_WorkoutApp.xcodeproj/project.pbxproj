@@ -25,6 +25,10 @@
 		46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5939C2A05A03300DFD63B /* FirstScreen.swift */; };
 		46E593A12A05A27200DFD63B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593A02A05A27200DFD63B /* Extensions.swift */; };
 		9A1281B42A140A0B00BB69BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A1281B32A140A0400BB69BC /* GoogleService-Info.plist */; };
+		9A7724692A14CDF500AEDE67 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724682A14CDF500AEDE67 /* WorkoutList.swift */; };
+		9A77246E2A14DA7B00AEDE67 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A77246D2A14DA7B00AEDE67 /* CalendarKit */; };
+		9A7724722A1519FD00AEDE67 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */; };
+		9A7724742A152B0600AEDE67 /* AddReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724732A152B0600AEDE67 /* AddReminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,9 @@
 		46E5939C2A05A03300DFD63B /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		46E593A02A05A27200DFD63B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9A1281B32A140A0400BB69BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A7724682A14CDF500AEDE67 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
+		9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
+		9A7724732A152B0600AEDE67 /* AddReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A77246E2A14DA7B00AEDE67 /* CalendarKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +120,9 @@
 				465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */,
 				465319172A08278A00332BA8 /* NewAccountScreen.swift */,
 				469E088B2A0AD537002D43AD /* UserProfileScreen.swift */,
+				9A7724682A14CDF500AEDE67 /* WorkoutList.swift */,
+				9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */,
+				9A7724732A152B0600AEDE67 /* AddReminder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 			);
 			name = StayFit_WorkoutApp;
 			packageProductDependencies = (
+				9A77246D2A14DA7B00AEDE67 /* CalendarKit */,
 			);
 			productName = StayFit_WorkoutApp;
 			productReference = 46E593692A059E3100DFD63B /* StayFit_WorkoutApp.app */;
@@ -269,6 +281,7 @@
 			);
 			mainGroup = 46E593602A059E3100DFD63B;
 			packageReferences = (
+				9A77246C2A14DA7B00AEDE67 /* XCRemoteSwiftPackageReference "CalendarKit" */,
 			);
 			productRefGroup = 46E5936A2A059E3100DFD63B /* Products */;
 			projectDirPath = "";
@@ -315,6 +328,7 @@
 			files = (
 				469E088C2A0AD537002D43AD /* UserProfileScreen.swift in Sources */,
 				46E593A12A05A27200DFD63B /* Extensions.swift in Sources */,
+				9A7724692A14CDF500AEDE67 /* WorkoutList.swift in Sources */,
 				46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */,
 				465319162A0824EE00332BA8 /* WorkoutGoalScreen.swift in Sources */,
 				46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */,
@@ -322,9 +336,11 @@
 				46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */,
 				46BE55C62A07AC4D003F93E6 /* LoginModel.swift in Sources */,
 				469A35F42A06C8CE00DED7F5 /* LoginScreen.swift in Sources */,
+				9A7724722A1519FD00AEDE67 /* ScheduleScreen.swift in Sources */,
 				465319182A08278A00332BA8 /* NewAccountScreen.swift in Sources */,
 				46271E032A0B814F009229D8 /* User.swift in Sources */,
 				46BE55C22A07AA2A003F93E6 /* LoginViewModel.swift in Sources */,
+				9A7724742A152B0600AEDE67 /* AddReminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A77246C2A14DA7B00AEDE67 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A77246D2A14DA7B00AEDE67 /* CalendarKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A77246C2A14DA7B00AEDE67 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			productName = CalendarKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46E593612A059E3100DFD63B /* Project object */;
 }

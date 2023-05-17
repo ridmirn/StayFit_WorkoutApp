@@ -131,7 +131,7 @@ class UserProfileScreen: UIViewController {
         self.CreateProfile.backgroundColor = UIColor.AppColor
         self.CreateProfile.setAttributedTitle(customProfileButton, for: .normal)
         //self.CreateProfile.addTarget(self, action:#selector(nextButtonTapped), for: .touchUpInside)
-        //self.CreateProfile.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        self.CreateProfile.addTarget(self, action: #selector(gotoWorkoutList), for: .touchUpInside)
         self.CreateProfile.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.CreateProfile.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant:  30),
@@ -139,6 +139,11 @@ class UserProfileScreen: UIViewController {
             self.CreateProfile.heightAnchor.constraint(equalToConstant: 50),
             self.CreateProfile.topAnchor.constraint(equalTo: Height.bottomAnchor, constant: 40),
         ])
+        }
+    
+    @objc func gotoWorkoutList (){
+           let workoutlist = WorkoutList()
+            navigationController?.pushViewController(workoutlist, animated:true)
         }
     
     let customProfileButton = NSMutableAttributedString(string: "Next", attributes: [
