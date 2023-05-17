@@ -1,3 +1,4 @@
+
 //
 //  NewAccountScreen.swift
 //  StayFit_WorkoutApp
@@ -6,8 +7,8 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
+//import Firebase
+//import FirebaseAuth
 
 class NewAccountScreen: UIViewController {
 
@@ -125,7 +126,7 @@ class NewAccountScreen: UIViewController {
         self.view.addSubview(CreateNewAccountutton)
         self.CreateNewAccountutton.backgroundColor = UIColor.AppColor
         self.CreateNewAccountutton.setAttributedTitle(customNewAccountButton, for: .normal)
-        self.CreateNewAccountutton.addTarget(self, action:#selector(creactAccountTapped), for: .touchUpInside)
+        //self.CreateNewAccountutton.addTarget(self, action:#selector(creactAccountTapped), for: .touchUpInside)
       
         self.CreateNewAccountutton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -142,31 +143,31 @@ class NewAccountScreen: UIViewController {
         
     ])
     
-    @objc func creactAccountTapped(){
-           let username = CAname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-           let email = CAappleid.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-           let password = CApassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+   // @objc func creactAccountTapped(){
+     //      let username = CAname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+       //    let email = CAappleid.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //   let password = CApassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
          
-           Auth.auth().createUser(withEmail: email, password: password ){(result, err) in
+           //Auth.auth().createUser(withEmail: email, password: password ){(result, err) in
                
-               if err != nil {
+             //  if err != nil {
              
-                   self.showError("error creating a user")
-               }
-               else{
-                   let db = Firestore.firestore()
-                   db.collection("User_login").addDocument(data: ["name":username,"uid":result!.user.uid]) { (error) in
+             //      self.showError("error creating a user")
+              // }
+               //else{
+                 //  let db = Firestore.firestore()
+                  // db.collection("User_login").addDocument(data: ["name":username,"uid":result!.user.uid]) { (error) in
                        
-                       if error != nil {
-                           self.showError("Error saving user data")
-                       }
-                   }
+                    //   if error != nil {
+                      //     self.showError("Error saving user data")
+                       //}
+                  // }
                    ///hworkout
-                   self.userProfile()
-               }
+                //   self.userProfile()
+               //}
            
-           }
-       }
+          // }
+      // }
        func showError(_ message: String){
            DispatchQueue.main.async{
                let alterController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
@@ -176,11 +177,11 @@ class NewAccountScreen: UIViewController {
            }
        }
        
-       func userProfile(){
-           let userprofile = UserProfileScreen()
-            navigationController?.pushViewController(userprofile, animated:true)
-           
-       }
+//       func userProfile(){
+//           let userprofile = UserProfileScreen()
+//            navigationController?.pushViewController(userprofile, animated:true)
+//
+//       }
 
     
    

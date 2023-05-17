@@ -1,3 +1,4 @@
+
 //
 //  LoginScreen.swift
 //  StayFit_WorkoutApp
@@ -7,7 +8,7 @@
 
 import UIKit
 
-import FirebaseAuth
+//import FirebaseAuth
 
 class LoginScreen: UIViewController {
 
@@ -117,7 +118,7 @@ func setLoginButton(){
     self.view.addSubview(loginButton)
     self.loginButton.backgroundColor = UIColor.AppColor
     self.loginButton.setAttributedTitle(customLoginButton, for: .normal)
-    self.loginButton.addTarget(self, action:#selector(loginTapped), for: .touchUpInside)
+   self.loginButton.addTarget(self, action:#selector(gotoProfileScreen), for: .touchUpInside)
   
     self.loginButton.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
@@ -164,33 +165,33 @@ func setNewAccountButton(){
          navigationController?.pushViewController(userprofile, animated:true)
      }
     
-    @objc func loginTapped(){
-        let email = appleid.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    //@objc func loginTapped(){
+      //  let email = appleid.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        Auth.auth().signIn(withEmail: email, password: password){
-            (result, error) in
-            if error != nil{
-                self.showError("Invalid creditonals")
-            }
-            else{
-                self.gotoProfileScreen()
-            }
+       // Auth.auth().signIn(withEmail: email, password: password){
+         //   (result, error) in
+           // if error != nil{
+             //   self.showError("Invalid creditonals")
+            //}
+            //else{
+              ///  self.gotoProfileScreen()
+            ///}
             
             
-        }
+        //}
     }
     
    
     
-    func showError(_ message: String){
-        DispatchQueue.main.async{
-            let alterController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            alterController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self.present (alterController, animated: true, completion: nil)
-            
-        }
-    }
+//    func showError(_ message: String){
+//        DispatchQueue.main.async{
+//            let alterController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+//            alterController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+//            self.present (alterController, animated: true, completion: nil)
+//
+//        }
+//    }
 
 
-}
+

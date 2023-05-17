@@ -1,4 +1,5 @@
 
+
 //
 //  UserProfileScreen.swift
 //  StayFit_WorkoutApp
@@ -7,11 +8,11 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 class UserProfileScreen: UIViewController {
     
-    var viewModel = UserProfileViewModel()
+  //  var viewModel = UserProfileViewModel()
     
     let titleLabel: UILabel = {
         let label = UILabel()
@@ -68,9 +69,9 @@ class UserProfileScreen: UIViewController {
         setHeight()
         setUserProfileButton()
         setLabel()
-        Age.text = viewModel.user.age
-        Weight.text = viewModel.user.weight
-        Height.text = viewModel.user.height
+//        Age.text = viewModel.user.age
+//        Weight.text = viewModel.user.weight
+//        Height.text = viewModel.user.height
     }
     
     func setLabel(){
@@ -130,7 +131,7 @@ class UserProfileScreen: UIViewController {
         self.CreateProfile.backgroundColor = UIColor.AppColor
         self.CreateProfile.setAttributedTitle(customProfileButton, for: .normal)
         //self.CreateProfile.addTarget(self, action:#selector(nextButtonTapped), for: .touchUpInside)
-        self.CreateProfile.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        //self.CreateProfile.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         self.CreateProfile.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.CreateProfile.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant:  30),
@@ -146,8 +147,8 @@ class UserProfileScreen: UIViewController {
         
     ])
     
-    @objc func nextButtonTapped(){
-        viewModel.save()
-    }
+//    @objc func nextButtonTapped(){
+//        viewModel.save()
+//    }
 
 }

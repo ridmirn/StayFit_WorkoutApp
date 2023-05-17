@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>381165558294-fd32j4ais54snmemnmacpplstqa0c94a.apps.googleusercontent.com</string>
+	<string>601855272259-uv2edojhb7tpk6meh5q7ie6smd30154i.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.381165558294-fd32j4ais54snmemnmacpplstqa0c94a</string>
+	<string>com.googleusercontent.apps.601855272259-uv2edojhb7tpk6meh5q7ie6smd30154i</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAdRoQWqwqiOGRjbUJFrwff4oBZzTfHTNQ</string>
+	<string>AIzaSyC52nFZhlkCUWwrmL3YwRLeB0Z-b8P0qxs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>381165558294</string>
+	<string>601855272259</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.StayFit.StayFit-WorkoutApp</string>
 	<key>PROJECT_ID</key>
-	<string>stayfit-workoutapp</string>
+	<string>stayfit-workout</string>
 	<key>STORAGE_BUCKET</key>
-	<string>stayfit-workoutapp.appspot.com</string>
+	<string>stayfit-workout.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:381165558294:ios:60eb64a58088cfbd3ab337</string>
+	<string>1:601855272259:ios:0c5012a4d9f5a15e817bf6</string>
 </dict>
 </plist>
