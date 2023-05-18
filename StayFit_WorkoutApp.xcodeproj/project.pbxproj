@@ -29,6 +29,7 @@
 		9A77246E2A14DA7B00AEDE67 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A77246D2A14DA7B00AEDE67 /* CalendarKit */; };
 		9A7724722A1519FD00AEDE67 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */; };
 		9A7724742A152B0600AEDE67 /* AddReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724732A152B0600AEDE67 /* AddReminder.swift */; };
+		9AAF7AD02A15DE1B00C81BCA /* IndiviuallWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF7ACF2A15DE1B00C81BCA /* IndiviuallWorkout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		9A7724682A14CDF500AEDE67 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
 		9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
 		9A7724732A152B0600AEDE67 /* AddReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminder.swift; sourceTree = "<group>"; };
+		9AAF7ACF2A15DE1B00C81BCA /* IndiviuallWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiviuallWorkout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				9A7724682A14CDF500AEDE67 /* WorkoutList.swift */,
 				9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */,
 				9A7724732A152B0600AEDE67 /* AddReminder.swift */,
+				9AAF7ACF2A15DE1B00C81BCA /* IndiviuallWorkout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				465319182A08278A00332BA8 /* NewAccountScreen.swift in Sources */,
 				46271E032A0B814F009229D8 /* User.swift in Sources */,
 				46BE55C22A07AA2A003F93E6 /* LoginViewModel.swift in Sources */,
+				9AAF7AD02A15DE1B00C81BCA /* IndiviuallWorkout.swift in Sources */,
 				9A7724742A152B0600AEDE67 /* AddReminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

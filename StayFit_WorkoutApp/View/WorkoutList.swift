@@ -46,7 +46,7 @@ class WorkoutList: UIViewController {
     
     
    @objc func gotoScheduleScreen (){
-    let schedueScreen = ScheduleScreen()
+    let schedueScreen = IndiviuallWorkout()
        navigationController?.pushViewController(schedueScreen, animated:true)
     }
     
