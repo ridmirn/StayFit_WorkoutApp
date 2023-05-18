@@ -6,77 +6,139 @@
 //
 
 import UIKit
+import CalendarKit
+import EventKit
+import EventKitUI
 
-class ScheduleScreen: UIViewController{
+final class ScheduleScreen: DayViewController, EKEventEditViewDelegate {
     
-    var models = [ReminderList]()
-
-    private let tableView: UITableView = {
-        let table = UITableView()
-        table.translatesAutoresizingMaskIntoConstraints = false
-        return table
-    }()
-    
-    private let addButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Add", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    
-    //let dataSource = ["A", "B", "C", "D"]
+    private let eventStore = EKEventStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        view.addSubview(tableView)
+        title = "Worlout Schedule"
+        requestAccessToCalendar()
+        subscribeToNotifications()
+    }
+    
+    func requestAccessToCalendar(){
+        eventStore.requestAccess(to: .event) { success, error in
+            
+        }
+    }
+    
+    func subscribeToNotifications(){
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(storeChanged(_:)),
+                                               name: .EKEventStoreChanged,
+                                               object: nil)
         
-        NSLayoutConstraint.activate([
-            self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 30)
-        ])
+    }
+    
+    @objc func storeChanged(_ notification: Notification){
+        reloadData()
+    }
+    
+    override func eventsForDate(_ date: Date) -> [EventDescriptor] {
+        let startDate = date
+        var oneDayComponents = DateComponents()
+        oneDayComponents.day = 1
         
-        addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addButton)
+        let endDate = calendar.date(byAdding: oneDayComponents, to: startDate)!
+        
+        let predicate = eventStore.predicateForEvents(withStart: startDate,
+                                                      end: endDate,
+                                                      calendars: nil)
+        
+        let eventKitEvents = eventStore.events(matching: predicate)
+        
+        let calendarKitEvents = eventKitEvents.map(EventKitWrapper.init)
+        
+        
+        return calendarKitEvents
     }
     
-    @objc private func addButtonTapped(){
-        print("Add tapped")
+    override func dayViewDidSelectEventView(_ eventView: EventView) {
+        guard let ckEvent = eventView.descriptor as? EventKitWrapper else {
+            return
+        }
+        
+        let ekEvent = ckEvent.ekEvent
+        presentDetailView(ekEvent)
+    }
+    private func presentDetailView(_ ekEvent: EKEvent){
+        let eventViewController = EKEventViewController()
+        eventViewController.event = ekEvent
+        eventViewController.allowsCalendarPreview = true
+        eventViewController.allowsEditing = true
+        navigationController?.pushViewController(eventViewController,
+                                                 animated: true)
     }
     
-}
-
-extension ScheduleScreen: UITableViewDelegate{
+    override func dayViewDidLongPressEventView(_ eventView: EventView) {
+        endEventEditing()
+        guard let ckEvent = eventView.descriptor as? EventKitWrapper else {
+            return
+        }
+        beginEditing(event: ckEvent, animated: true)
+    }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {
+        guard let editingEvent = event as? EventKitWrapper else {return}
+        if let originalEvent = event.editedEvent{
+            editingEvent.commitEditing()
+            
+            if originalEvent === editingEvent {
+                presentEditingViewForEvent(editingEvent.ekEvent)
+                
+            }else{
+                try! eventStore.save(editingEvent.ekEvent,
+                                     span: .thisEvent)
+            }
+            
+           
+        }
+        reloadData()
     }
-}
-
-extension ScheduleScreen: UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    
+    func presentEditingViewForEvent(_ ekEvent: EKEvent){
+        let editingViewController = EKEventEditViewController()
+        editingViewController.editViewDelegate = self
+        editingViewController.event = ekEvent
+        editingViewController.eventStore = eventStore
+        present(editingViewController, animated: true, completion: nil)
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+    
+    override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
+        endEventEditing()
     }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models[indexPath.row].title
-
-        return cell
+    
+    override func dayViewDidBeginDragging(dayView: DayView) {
+        endEventEditing()
     }
-}
-
-struct ReminderList {
-    let title: String
-    let date: Date
-    let identifier: String
+    
+    override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
+        let newEventKitEvent = EKEvent(eventStore: eventStore)
+        newEventKitEvent.calendar = eventStore.defaultCalendarForNewEvents
+        
+        var oneHourComponents = DateComponents()
+        oneHourComponents.hour = 1
+        
+        let endDate = calendar.date(byAdding: oneHourComponents, to: date)
+        
+        newEventKitEvent.startDate = date
+        newEventKitEvent.endDate = endDate
+        newEventKitEvent.title = "New Event"
+        
+        let newEventKitWrapper = EventKitWrapper(eventKitEvent: newEventKitEvent)
+        newEventKitWrapper.editedEvent = newEventKitWrapper
+        
+        create(event: newEventKitWrapper, animated: true)
+    }
+    
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        endEventEditing()
+        reloadData()
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
