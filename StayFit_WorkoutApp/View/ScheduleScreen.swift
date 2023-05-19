@@ -12,38 +12,58 @@ import EventKitUI
 
 final class ScheduleScreen: DayViewController, EKEventEditViewDelegate {
     
-    private let eventStore = EKEventStore()
+    private var eventStore = EKEventStore()
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Worlout Schedule"
+        title = "Workout Schedule"
+        
         requestAccessToCalendar()
+       
         subscribeToNotifications()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setToolbarHidden(true, animated: false)
+    }
     
-    func requestAccessToCalendar(){
-        eventStore.requestAccess(to: .event) { success, error in
+    private func requestAccessToCalendar() {
+        
+        eventStore.requestAccess(to: .event) { [weak self] granted, error in
             
+            DispatchQueue.main.async {
+                guard let self else { return }
+                self.initializeStore()
+                self.subscribeToNotifications()
+                self.reloadData()
+            }
         }
     }
     
-    func subscribeToNotifications(){
+    private func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(storeChanged(_:)),
                                                name: .EKEventStoreChanged,
-                                               object: nil)
-        
+                                               object: eventStore)
     }
     
-    @objc func storeChanged(_ notification: Notification){
+    private func initializeStore() {
+        eventStore = EKEventStore()
+    }
+    
+    @objc private func storeChanged(_ notification: Notification) {
         reloadData()
     }
     
     override func eventsForDate(_ date: Date) -> [EventDescriptor] {
+        
         let startDate = date
         var oneDayComponents = DateComponents()
         oneDayComponents.day = 1
-        
+    
         let endDate = calendar.date(byAdding: oneDayComponents, to: startDate)!
         
         let predicate = eventStore.predicateForEvents(withStart: startDate,
@@ -51,9 +71,7 @@ final class ScheduleScreen: DayViewController, EKEventEditViewDelegate {
                                                       calendars: nil)
         
         let eventKitEvents = eventStore.events(matching: predicate)
-        
         let calendarKitEvents = eventKitEvents.map(EventKitWrapper.init)
-        
         
         return calendarKitEvents
     }
@@ -62,78 +80,85 @@ final class ScheduleScreen: DayViewController, EKEventEditViewDelegate {
         guard let ckEvent = eventView.descriptor as? EventKitWrapper else {
             return
         }
-        
-        let ekEvent = ckEvent.ekEvent
-        presentDetailView(ekEvent)
+        presentDetailViewForEvent(ckEvent.ekEvent)
     }
-    private func presentDetailView(_ ekEvent: EKEvent){
-        let eventViewController = EKEventViewController()
-        eventViewController.event = ekEvent
-        eventViewController.allowsCalendarPreview = true
-        eventViewController.allowsEditing = true
-        navigationController?.pushViewController(eventViewController,
+    
+    private func presentDetailViewForEvent(_ ekEvent: EKEvent) {
+        let eventController = EKEventViewController()
+        eventController.event = ekEvent
+        eventController.allowsCalendarPreview = true
+        eventController.allowsEditing = true
+        navigationController?.pushViewController(eventController,
                                                  animated: true)
     }
     
-    override func dayViewDidLongPressEventView(_ eventView: EventView) {
+  
+    
+    override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
+      
         endEventEditing()
-        guard let ckEvent = eventView.descriptor as? EventKitWrapper else {
+        let newEKWrapper = createNewEvent(at: date)
+        create(event: newEKWrapper, animated: true)
+    }
+    
+    private func createNewEvent(at date: Date) -> EventKitWrapper {
+        let newEKEvent = EKEvent(eventStore: eventStore)
+        newEKEvent.calendar = eventStore.defaultCalendarForNewEvents
+        
+        var components = DateComponents()
+        components.hour = 1
+        let endDate = calendar.date(byAdding: components, to: date)
+        
+        newEKEvent.startDate = date
+        newEKEvent.endDate = endDate
+        newEKEvent.title = "New event"
+
+        let newEKWrapper = EventKitWrapper(eventKitEvent: newEKEvent)
+        newEKWrapper.editedEvent = newEKWrapper
+        return newEKWrapper
+    }
+    
+    override func dayViewDidLongPressEventView(_ eventView: EventView) {
+        guard let descriptor = eventView.descriptor as? EventKitWrapper else {
             return
         }
-        beginEditing(event: ckEvent, animated: true)
+        endEventEditing()
+        beginEditing(event: descriptor,
+                     animated: true)
     }
     
     override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {
-        guard let editingEvent = event as? EventKitWrapper else {return}
-        if let originalEvent = event.editedEvent{
+        guard let editingEvent = event as? EventKitWrapper else { return }
+        if let originalEvent = event.editedEvent {
             editingEvent.commitEditing()
             
             if originalEvent === editingEvent {
+               
                 presentEditingViewForEvent(editingEvent.ekEvent)
-                
-            }else{
+            } else {
+               
                 try! eventStore.save(editingEvent.ekEvent,
                                      span: .thisEvent)
             }
-            
-           
         }
         reloadData()
     }
     
-    func presentEditingViewForEvent(_ ekEvent: EKEvent){
-        let editingViewController = EKEventEditViewController()
-        editingViewController.editViewDelegate = self
-        editingViewController.event = ekEvent
-        editingViewController.eventStore = eventStore
-        present(editingViewController, animated: true, completion: nil)
+    
+    private func presentEditingViewForEvent(_ ekEvent: EKEvent) {
+        let eventEditViewController = EKEventEditViewController()
+        eventEditViewController.event = ekEvent
+        eventEditViewController.eventStore = eventStore
+        eventEditViewController.editViewDelegate = self
+        present(eventEditViewController, animated: true, completion: nil)
     }
     
-    override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
+    override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
         endEventEditing()
     }
     
     override func dayViewDidBeginDragging(dayView: DayView) {
         endEventEditing()
-    }
-    
-    override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
-        let newEventKitEvent = EKEvent(eventStore: eventStore)
-        newEventKitEvent.calendar = eventStore.defaultCalendarForNewEvents
-        
-        var oneHourComponents = DateComponents()
-        oneHourComponents.hour = 1
-        
-        let endDate = calendar.date(byAdding: oneHourComponents, to: date)
-        
-        newEventKitEvent.startDate = date
-        newEventKitEvent.endDate = endDate
-        newEventKitEvent.title = "New Event"
-        
-        let newEventKitWrapper = EventKitWrapper(eventKitEvent: newEventKitEvent)
-        newEventKitWrapper.editedEvent = newEventKitWrapper
-        
-        create(event: newEventKitWrapper, animated: true)
     }
     
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
