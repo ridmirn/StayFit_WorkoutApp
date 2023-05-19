@@ -153,8 +153,16 @@ class UserProfileScreen: UIViewController {
         let heightInMeter = height / 100
         let bmi = weight / (heightInMeter * heightInMeter)
         
-        let resultVC = WorkoutList(bmiValue: bmi)
-        navigationController?.pushViewController(resultVC, animated: true)
+        if bmi < 18.5 {
+            let resultVC = WorkoutList(bmiValue: bmi)
+            navigationController?.pushViewController(resultVC, animated: true)
+        }
+        
+        else {
+            let resultVC = WeightLossScreen(bmiValue: bmi)
+            navigationController?.pushViewController(resultVC, animated: true)
+        }
+       
     }
     
     private func displayError(){

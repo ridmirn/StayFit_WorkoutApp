@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		46271E012A0B7693009229D8 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46271E002A0B7693009229D8 /* UserProfileVM.swift */; };
 		46271E032A0B814F009229D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46271E022A0B814F009229D8 /* User.swift */; };
-		465319162A0824EE00332BA8 /* WorkoutGoalScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */; };
 		465319182A08278A00332BA8 /* NewAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465319172A08278A00332BA8 /* NewAccountScreen.swift */; };
 		469A35F42A06C8CE00DED7F5 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */; };
 		469E088C2A0AD537002D43AD /* UserProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E088B2A0AD537002D43AD /* UserProfileScreen.swift */; };
@@ -25,11 +24,11 @@
 		46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5939C2A05A03300DFD63B /* FirstScreen.swift */; };
 		46E593A12A05A27200DFD63B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E593A02A05A27200DFD63B /* Extensions.swift */; };
 		9A1281B42A140A0B00BB69BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A1281B32A140A0400BB69BC /* GoogleService-Info.plist */; };
+		9A474A0E2A17E9BA0031F6C7 /* WeightLossScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A474A0D2A17E9BA0031F6C7 /* WeightLossScreen.swift */; };
 		9A4B31332A169CDA005D8CB2 /* EventKitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B31322A169CDA005D8CB2 /* EventKitWrapper.swift */; };
 		9A7724692A14CDF500AEDE67 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724682A14CDF500AEDE67 /* WorkoutList.swift */; };
 		9A77246E2A14DA7B00AEDE67 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A77246D2A14DA7B00AEDE67 /* CalendarKit */; };
 		9A7724722A1519FD00AEDE67 /* ScheduleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */; };
-		9A7724742A152B0600AEDE67 /* AddReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7724732A152B0600AEDE67 /* AddReminder.swift */; };
 		9AAF7AD02A15DE1B00C81BCA /* IndiviuallWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF7ACF2A15DE1B00C81BCA /* IndiviuallWorkout.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 /* Begin PBXFileReference section */
 		46271E002A0B7693009229D8 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
 		46271E022A0B814F009229D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutGoalScreen.swift; sourceTree = "<group>"; };
 		465319172A08278A00332BA8 /* NewAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountScreen.swift; sourceTree = "<group>"; };
 		469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		469E088B2A0AD537002D43AD /* UserProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileScreen.swift; sourceTree = "<group>"; };
@@ -73,10 +71,10 @@
 		46E5939C2A05A03300DFD63B /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		46E593A02A05A27200DFD63B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9A1281B32A140A0400BB69BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A474A0D2A17E9BA0031F6C7 /* WeightLossScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLossScreen.swift; sourceTree = "<group>"; };
 		9A4B31322A169CDA005D8CB2 /* EventKitWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventKitWrapper.swift; sourceTree = "<group>"; };
 		9A7724682A14CDF500AEDE67 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
 		9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleScreen.swift; sourceTree = "<group>"; };
-		9A7724732A152B0600AEDE67 /* AddReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminder.swift; sourceTree = "<group>"; };
 		9AAF7ACF2A15DE1B00C81BCA /* IndiviuallWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndiviuallWorkout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,14 +119,13 @@
 				46E593A02A05A27200DFD63B /* Extensions.swift */,
 				46E5939C2A05A03300DFD63B /* FirstScreen.swift */,
 				469A35F32A06C8CE00DED7F5 /* LoginScreen.swift */,
-				465319152A0824EE00332BA8 /* WorkoutGoalScreen.swift */,
 				465319172A08278A00332BA8 /* NewAccountScreen.swift */,
 				469E088B2A0AD537002D43AD /* UserProfileScreen.swift */,
 				9A7724682A14CDF500AEDE67 /* WorkoutList.swift */,
 				9A7724712A1519FD00AEDE67 /* ScheduleScreen.swift */,
-				9A7724732A152B0600AEDE67 /* AddReminder.swift */,
 				9AAF7ACF2A15DE1B00C81BCA /* IndiviuallWorkout.swift */,
 				9A4B31322A169CDA005D8CB2 /* EventKitWrapper.swift */,
+				9A474A0D2A17E9BA0031F6C7 /* WeightLossScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,19 +333,18 @@
 				46E593A12A05A27200DFD63B /* Extensions.swift in Sources */,
 				9A7724692A14CDF500AEDE67 /* WorkoutList.swift in Sources */,
 				46E5939D2A05A03300DFD63B /* FirstScreen.swift in Sources */,
-				465319162A0824EE00332BA8 /* WorkoutGoalScreen.swift in Sources */,
 				46E5936D2A059E3100DFD63B /* AppDelegate.swift in Sources */,
 				9A4B31332A169CDA005D8CB2 /* EventKitWrapper.swift in Sources */,
 				46271E012A0B7693009229D8 /* UserProfileVM.swift in Sources */,
 				46E5936F2A059E3100DFD63B /* SceneDelegate.swift in Sources */,
 				46BE55C62A07AC4D003F93E6 /* LoginModel.swift in Sources */,
 				469A35F42A06C8CE00DED7F5 /* LoginScreen.swift in Sources */,
+				9A474A0E2A17E9BA0031F6C7 /* WeightLossScreen.swift in Sources */,
 				9A7724722A1519FD00AEDE67 /* ScheduleScreen.swift in Sources */,
 				465319182A08278A00332BA8 /* NewAccountScreen.swift in Sources */,
 				46271E032A0B814F009229D8 /* User.swift in Sources */,
 				46BE55C22A07AA2A003F93E6 /* LoginViewModel.swift in Sources */,
 				9AAF7AD02A15DE1B00C81BCA /* IndiviuallWorkout.swift in Sources */,
-				9A7724742A152B0600AEDE67 /* AddReminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
