@@ -35,7 +35,7 @@ class UserProfileScreen: UIViewController {
     
     let Weight: UITextField = {
         let textfield = UITextField()
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .decimalPad
         textfield.layer.cornerRadius = 8
         textfield.layer.masksToBounds = true
         textfield.layer.borderWidth = 1.0
@@ -44,14 +44,14 @@ class UserProfileScreen: UIViewController {
     }()
     let Height: UITextField = {
         let textfield = UITextField()
-        textfield.keyboardType = .emailAddress
+        textfield.keyboardType = .decimalPad
         textfield.layer.cornerRadius = 8
         textfield.layer.masksToBounds = true
         textfield.layer.borderWidth = 1.0
         textfield.textAlignment = .center
         return textfield
     }()
-    let CreateProfile: UIButton = {
+    let calculateButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 8
@@ -69,6 +69,7 @@ class UserProfileScreen: UIViewController {
         setHeight()
         setUserProfileButton()
         setLabel()
+        calculateButton.addTarget(self, action: #selector(calculateBMI), for: .touchUpInside)
 //        Age.text = viewModel.user.age
 //        Weight.text = viewModel.user.weight
 //        Height.text = viewModel.user.height
@@ -127,25 +128,47 @@ class UserProfileScreen: UIViewController {
     }
     
     func setUserProfileButton(){
-        self.view.addSubview(CreateProfile)
-        self.CreateProfile.backgroundColor = UIColor.AppColor
-        self.CreateProfile.setAttributedTitle(customProfileButton, for: .normal)
+        self.view.addSubview(calculateButton)
+        self.calculateButton.backgroundColor = UIColor.AppColor
+        self.calculateButton.setAttributedTitle(customProfileButton, for: .normal)
         //self.CreateProfile.addTarget(self, action:#selector(nextButtonTapped), for: .touchUpInside)
-        self.CreateProfile.addTarget(self, action: #selector(gotoWorkoutList), for: .touchUpInside)
-        self.CreateProfile.translatesAutoresizingMaskIntoConstraints = false
+      //  self.calculateButton.addTarget(self, action: #selector(gotoWorkoutList), for: .touchUpInside)
+        self.calculateButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.CreateProfile.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant:  30),
-            self.CreateProfile.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant:  -30),
-            self.CreateProfile.heightAnchor.constraint(equalToConstant: 50),
-            self.CreateProfile.topAnchor.constraint(equalTo: Height.bottomAnchor, constant: 40),
+            self.calculateButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant:  30),
+            self.calculateButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant:  -30),
+            self.calculateButton.heightAnchor.constraint(equalToConstant: 50),
+            self.calculateButton.topAnchor.constraint(equalTo: Height.bottomAnchor, constant: 40),
         ])
         }
     
-    @objc func gotoWorkoutList (){
-           let workoutlist = WorkoutList()
-            navigationController?.pushViewController(workoutlist, animated:true)
+    @objc private func calculateBMI(){
+        guard let weightText = Weight.text,
+              let weight = Double(weightText),
+              let heightText = Height.text,
+              let height = Double(heightText) else {
+            displayError()
+            return
         }
+        let heightInMeter = height / 100
+        let bmi = weight / (heightInMeter * heightInMeter)
+        
+        let resultVC = WorkoutList(bmiValue: bmi)
+        navigationController?.pushViewController(resultVC, animated: true)
+    }
     
+    private func displayError(){
+        let alert = UIAlertController(title: "Invalid Input", message: "Please enter valid weight and height values", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+//    @objc func gotoWorkoutList (){
+//           let workoutlist = WorkoutList()
+//            navigationController?.pushViewController(workoutlist, animated:true)
+//        }
+//
     let customProfileButton = NSMutableAttributedString(string: "Next", attributes: [
         NSAttributedString.Key.foregroundColor : UIColor.black,
         NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)
