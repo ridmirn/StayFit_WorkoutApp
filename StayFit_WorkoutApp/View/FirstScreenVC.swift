@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstScreen: UIViewController {
+class FirstScreenVC: UIViewController {
 
     let  StartButton = UIButton ()
     
@@ -58,7 +58,7 @@ class FirstScreen: UIViewController {
     ])
     
    @objc func goToLoginScreen (){
-    let loginScreen = LoginScreen()
+    let loginScreen = LoginScreenVC()
        navigationController?.pushViewController(loginScreen, animated:true)
     }
 

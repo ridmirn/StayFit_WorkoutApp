@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WorkoutList: UIViewController {
+class HomepageWGVC: UIViewController {
     let  ScheduleButton = UIButton ()
     private let bmiValue: Double
     
@@ -74,7 +74,7 @@ class WorkoutList: UIViewController {
     ])
     
    @objc func gotoScheduleScreen (){
-    let schedueScreen = ScheduleScreen()
+    let schedueScreen = PogressScreenVC()
        navigationController?.pushViewController(schedueScreen, animated:true)
     }
 }

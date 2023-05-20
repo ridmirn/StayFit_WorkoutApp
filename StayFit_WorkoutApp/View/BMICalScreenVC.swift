@@ -10,7 +10,7 @@
 import UIKit
 //import Firebase
 
-class UserProfileScreen: UIViewController {
+class BMICalScreenVC: UIViewController {
     
   //  var viewModel = UserProfileViewModel()
     
@@ -100,7 +100,7 @@ class UserProfileScreen: UIViewController {
     func setWeight (){
         self.view.addSubview(Weight)
         self.Weight.backgroundColor = UIColor.FieldColor
-        self.Weight.attributedPlaceholder = NSAttributedString(string: "Weight", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        self.Weight.attributedPlaceholder = NSAttributedString(string: "Weight (Kg)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
   
         self.Weight.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -115,7 +115,7 @@ class UserProfileScreen: UIViewController {
     func setHeight (){
         self.view.addSubview(Height)
         self.Height.backgroundColor = UIColor.FieldColor
-        self.Height.attributedPlaceholder = NSAttributedString(string: "Height", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        self.Height.attributedPlaceholder = NSAttributedString(string: "Height (cm)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
   
         self.Height.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -154,12 +154,12 @@ class UserProfileScreen: UIViewController {
         let bmi = weight / (heightInMeter * heightInMeter)
         
         if bmi < 18.5 {
-            let resultVC = WorkoutList(bmiValue: bmi)
+            let resultVC = HomepageWGVC(bmiValue: bmi)
             navigationController?.pushViewController(resultVC, animated: true)
         }
         
         else {
-            let resultVC = WeightLossScreen(bmiValue: bmi)
+            let resultVC = HomepageWLVC(bmiValue: bmi)
             navigationController?.pushViewController(resultVC, animated: true)
         }
        

@@ -10,7 +10,7 @@ import UIKit
 
 //import FirebaseAuth
 
-class LoginScreen: UIViewController {
+class LoginScreenVC: UIViewController {
 
     
     let titleLabel: UILabel = {
@@ -156,12 +156,12 @@ func setNewAccountButton(){
         
     ])
     @objc func gotoNewAcoountScreen (){
-           let newaccount = NewAccountScreen()
+           let newaccount = CreateAccountVC()
             navigationController?.pushViewController(newaccount, animated:true)
         }
     
     @objc func gotoProfileScreen (){
-        let userprofile = UserProfileScreen()
+        let userprofile = BMICalScreenVC()
          navigationController?.pushViewController(userprofile, animated:true)
      }
     

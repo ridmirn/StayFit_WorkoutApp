@@ -10,7 +10,7 @@ import UIKit
 //import Firebase
 //import FirebaseAuth
 
-class NewAccountScreen: UIViewController {
+class CreateAccountVC: UIViewController {
 
     let titleLabel: UILabel = {
         let label = UILabel()

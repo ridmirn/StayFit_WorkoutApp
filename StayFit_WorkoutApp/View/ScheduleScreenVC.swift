@@ -10,7 +10,7 @@ import CalendarKit
 import EventKit
 import EventKitUI
 
-final class ScheduleScreen: DayViewController, EKEventEditViewDelegate {
+final class ScheduleScreenVC: DayViewController, EKEventEditViewDelegate {
     
     private var eventStore = EKEventStore()
     

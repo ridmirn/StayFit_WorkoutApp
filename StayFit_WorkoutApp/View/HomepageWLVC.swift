@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeightLossScreen: UIViewController {
+class HomepageWLVC: UIViewController {
     private let bmiValue: Double
     private let resultLabel: UILabel = {
         let label = UILabel()

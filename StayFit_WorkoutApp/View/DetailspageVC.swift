@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IndiviuallWorkout: UIViewController {
+class DetailspageVC: UIViewController {
 
     private var countdownLabel: UILabel!
     private var startButton: UIButton!
