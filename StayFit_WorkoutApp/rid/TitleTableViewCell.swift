@@ -2,7 +2,7 @@
 //  TitleTableViewCell.swift
 //  StayFit_WorkoutApp
 //
-//  Created by Ridmi Natasha on 2023-05-21.
+//  Created by Ridmi on 2023-05-21.
 //
 
 
